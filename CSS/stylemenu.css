@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+}
+/* Variavéis */
+:root{
+    --green-color: #37db05;
+    --orange-color: rgb(255, 81, 0);
+    --text-color: rgb(32, 32, 32) ;
+    --bg-color: rgb(245, 244, 244) ; 
+}
+/* Customização de barra de rolagem */
+::-webkit-scrollbar{
+    width: 0.5rem;
+    background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb{
+    width: 0.5rem;
+    background: var(--green-color);
+    border-radius: 5rem;
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    color: var(--text-color);
+}
+
+section{
+    padding: 4.5rem 0 1.5rem;
+}
+
+header{
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(253, 253, 253);
+    padding: 25px 8%;
+    box-shadow: 25px rgba(56, 56, 56, 0.1);
+}
+
+header .logo{
+    font-size: 25px;
+    font-weight: bolder;
+    color: rgb(250, 89, 25);
+}
+
+header .logo span{
+    color: #28ad00;
+}
+
+header #nav ul{
+    list-style: none;
+    display: inline-flex;
+}
+
+header #nav ul li{
+    letter-spacing: 2px;
+    margin-left: 25px;
+}
+
+header #nav ul li a{
+    font-size: 16px;
+    margin-left: 20px;
+    color: rgb(88, 88, 88);
+}
+
+header #nav ul li a:hover{
+    color:var(--green-color);
+}
+
+header #nav ul li #entrar{
+    color: var(--green-color);
+}
+
+header #nav ul li #entrar:hover{
+    color: var(--text-color);
+}
+
+#btn{
+    font-size: 25px;
+	color: rgb(20, 20, 20);
+	float: right;
+	line-height: 20px;
+	margin-right: 20px;
+	cursor: pointer;
+    display: none;
+}
+
+/* responsivo */
+@media (max-width: 1024px){
+    header .logo{
+        font-size: 20px;
+        padding-left: 40px;
+    }
+    ul li a{
+        font-size: 18px;
+    }
+}
+@media (max-width: 983px){
+    #btn{
+        display: block;
+    }
+    #nav #menu{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: 70px;
+        right: 0px;
+        height: 0px;
+        transition:  .6s;
+        background: rgb(231, 231, 231);
+        z-index: 1000;
+        visibility: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    #nav.active #menu{
+        height: calc(100vh - 70px);
+        visibility: visible;
+        overflow-y: auto;
+    }
+    #menu li{
+        padding: 1rem 0;
+        margin: 0 1rem;
+        border-bottom: 1px solid rgba(0, 0, 0, .05);
+    }
+}

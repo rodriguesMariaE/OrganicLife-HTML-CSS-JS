@@ -1,2 +1,2 @@
 # OrganicLife-HTML-CSS-JS
- Primeiro repositório Git e GitHub
+Site utilizando CSS e HTML, com um menu responsivo usando JS
